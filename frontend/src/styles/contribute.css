@@ -1,0 +1,405 @@
+/* Contribute Component Styles */
+body {
+  background: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.suggestion {
+  width: 100%;
+  padding: 3rem 2rem;
+  background: #000000;
+  color: #ffffff;
+}
+
+.suggestion h3 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.suggestion h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #ff0000;
+  box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+}
+
+.person {
+  display: grid;
+  grid-template-columns: 1fr 150px 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.suggestion_box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Input Styles */
+.input_name,
+.input_age,
+.input_country,
+.input_title,
+.input_purpose {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.5);
+  padding: 1rem 0;
+  color: #ffffff;
+  font-size: 1.1rem;
+  width: 100%;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input_name:focus,
+.input_age:focus,
+.input_country:focus,
+.input_title:focus,
+.input_purpose:focus {
+  border-bottom: 2px solid #ff0000;
+  box-shadow: 0 2px 0 0 #ff0000, 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.input_name::placeholder,
+.input_age::placeholder,
+.input_country::placeholder,
+.input_title::placeholder,
+.input_purpose::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Select Box */
+.select_box {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.5);
+  padding: 1rem 0;
+  color: #ffffff;
+  font-size: 1.1rem;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.select_box:focus {
+  border-bottom: 2px solid #ff0000;
+  box-shadow: 0 2px 0 0 #ff0000, 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.select_box option {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Labels */
+.suggestion_box p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.suggestion_box p::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: #ff0000;
+  box-shadow: 0 0 10px #ff0000;
+}
+
+/* File Inputs */
+input[type="file"] {
+  background: transparent;
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  border-bottom: 2px solid #ff0000;
+  padding: 1rem;
+  color: #ffffff;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #ff0000;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+input[type="file"]::file-selector-button {
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #cc0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+  background: transparent;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 2rem auto;
+  display: block;
+  position: relative;
+}
+
+.submit-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #ff0000;
+  box-shadow: 0 0 20px #ff0000;
+}
+
+.submit-btn:hover {
+  background: #ff0000;
+  color: #000000;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+}
+
+/* Suggestion Grid */
+.suggestion-grid {
+  width: 100%;
+  padding: 3rem 2rem;
+  background: #000000;
+}
+
+.suggestion-grid h3 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.suggestion-grid h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #ff0000;
+  box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+}
+
+.suggestion-item {
+  background: #000000;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.suggestion-item:hover {
+  border-bottom: 1px solid #ff0000;
+}
+
+.suggestion-item strong {
+  color: #ff0000;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.suggestion-item strong::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.suggestion-item h3 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.suggestion-item h3::after {
+  display: none;
+}
+
+.suggestion-item p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.suggestion-item em {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  justify-content: flex-end;
+}
+
+.user_btn {
+  background: transparent;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.user_btn::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: #ff0000;
+  box-shadow: 0 0 8px #ff0000;
+}
+
+.user_btn:hover {
+  background: #ff0000;
+  color: #000000;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+  transform: translateY(-1px);
+}
+
+/* Media */
+.uploaded_image {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  object-fit: cover;
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: 10px;
+  border: 4px solid #ff0000;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  background: rgba(20, 20, 20, 0.9);
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.uploaded_image:hover {
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.8),
+    inset 0 0 30px rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+  filter: brightness(1) contrast(1.2);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.uploaded-video {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: 10px;
+  border: 4px solid #ff0000;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  background: rgba(20, 20, 20, 0.9);
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.uploaded-video:hover {
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.8),
+    inset 0 0 30px rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+  filter: brightness(1) contrast(1.2);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .person {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .suggestion {
+    padding: 2rem 1rem;
+  }
+  
+  .suggestion-grid {
+    padding: 2rem 1rem;
+  }
+  
+  .buttons {
+    position: static;
+    margin-bottom: 1rem;
+    justify-content: flex-end;
+  }
+}

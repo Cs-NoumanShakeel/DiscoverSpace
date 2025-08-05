@@ -1,0 +1,228 @@
+nav.navbar {
+  background-color: #000; /* black */
+  color: #ccc; /* greyish-white */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+nav .logo {
+  height: 45px;
+}
+
+nav .middle, nav .right {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav .middle {
+  gap: 3.5rem;
+  margin-left: 20px;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #1a1a1a; /* slightly different shade */
+  color: #fff;
+}
+
+/* Mobile menu toggle button */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.mobile-toggle:hover {
+  background-color: #1a1a1a;
+}
+
+.mobile-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #ccc;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown trigger */
+.dropdown > span {
+  color: #ccc;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.dropdown:hover > span {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Submenu container */
+.submenu {
+  background-color: #000;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  padding: 1rem 4.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 350px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  animation: slideDown 0.2s ease-out;
+}
+
+/* Smooth slide-down animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.submenu a {
+  color: #ccc;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  nav.navbar {
+    padding: 0.8rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  nav .middle, nav .right {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-left: 0;
+    padding-top: 1rem;
+  }
+
+  nav .middle.active, nav .right.active {
+    display: flex;
+  }
+
+  nav .middle a, nav .right a {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #333;
+  }
+
+  nav .middle a:last-child, nav .right a:last-child {
+    border-bottom: none;
+  }
+
+  /* Mobile dropdown adjustments */
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown > span {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #333;
+    display: block;
+  }
+
+  .submenu {
+    position: static;
+    min-width: auto;
+    width: 100%;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background-color: #1a1a1a;
+    animation: none;
+    margin-left: 1rem;
+  }
+
+  .submenu a {
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid #333;
+  }
+
+  .submenu a:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Tablet styles */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  nav.navbar {
+    padding: 0.8rem 1.5rem;
+  }
+
+  nav .middle {
+    gap: 2rem;
+    margin-left: 10px;
+  }
+
+  nav .middle, nav .right {
+    gap: 1rem;
+  }
+
+  .submenu {
+    min-width: 280px;
+    padding: 1rem 3rem;
+  }
+}
+
+/* Small mobile adjustments */
+@media screen and (max-width: 480px) {
+  nav.navbar {
+    padding: 0.8rem 0.5rem;
+  }
+
+  nav .logo {
+    height: 35px;
+  }
+
+  .submenu {
+    margin-left: 0.5rem;
+  }
+}

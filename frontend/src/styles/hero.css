@@ -1,0 +1,139 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+/* Tablet styles (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+  .hero-section {
+    height: 550px;
+  }
+
+  .hero-overlay {
+    top: 50px;
+    padding: 0 1.5rem;
+    gap: 12px;
+  }
+}
+
+/* Mobile landscape (481px to 768px) */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: 450px;
+  }
+
+  .hero-overlay {
+    top: 40px;
+    padding: 0 1rem;
+    gap: 15px;
+  }
+
+  /* Ensure video maintains aspect ratio on mobile */
+  .hero-video {
+    min-height: 450px;
+    object-position: center center;
+  }
+}
+
+/* Mobile portrait (up to 480px) */
+@media screen and (max-width: 480px) {
+  .hero-section {
+    height: 400px;
+  }
+
+  .hero-overlay {
+    top: 30px;
+    padding: 0 0.8rem;
+    gap: 18px;
+    justify-content: center;
+  }
+
+  .hero-video {
+    min-height: 400px;
+  }
+}
+
+/* Very small screens (up to 360px) */
+@media screen and (max-width: 360px) {
+  .hero-section {
+    height: 350px;
+  }
+
+  .hero-overlay {
+    top: 20px;
+    padding: 0 0.5rem;
+    gap: 20px;
+  }
+
+  .hero-video {
+    min-height: 350px;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    height: 100vh;
+    min-height: 300px;
+  }
+
+  .hero-overlay {
+    top: 20px;
+    gap: 8px;
+  }
+
+  .hero-video {
+    height: 100vh;
+    min-height: 300px;
+  }
+}
+
+/* High DPI/Retina display optimizations */
+@media screen and (-webkit-min-device-pixel-ratio: 2), 
+       screen and (min-resolution: 192dpi) {
+  .hero-video {
+    /* Ensure crisp video on high-DPI screens */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    /* Pause or reduce video motion if user prefers */
+    animation-play-state: paused;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .hero-overlay {
+    /* Enhance text contrast in dark mode */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+}

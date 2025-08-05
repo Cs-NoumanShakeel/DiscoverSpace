@@ -1,0 +1,378 @@
+/* Add universal reset for full width */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Rovers and Spacecrafts Professional Dark Styles */
+.rovers-spacecrafts-container {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 2rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e5e5e5;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Subtle animated background */
+.rovers-spacecrafts-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(70, 130, 180, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+  animation: subtlePulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes subtlePulse {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+/* Main container padding */
+.rovers-spacecrafts-container > * {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Section headings */
+.rovers-spacecrafts-container h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  color: #4682b4;
+  text-shadow: 0 0 20px rgba(70, 130, 180, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.rovers-spacecrafts-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #4682b4, transparent);
+  border-radius: 2px;
+}
+
+/* Loading state */
+.rovers-spacecrafts-container > p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #4682b4;
+  padding: 4rem 0;
+  animation: loadingPulse 2s ease-in-out infinite;
+}
+
+@keyframes loadingPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* =================================
+   MARS ROVERS SECTION (GRID LAYOUT)
+   ================================= */
+
+.rovers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0 4rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rover-card {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(70, 130, 180, 0.2);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(70, 130, 180, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.rover-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4682b4, transparent);
+  transition: left 0.6s ease;
+}
+
+.rover-card:hover::before {
+  left: 100%;
+}
+
+.rover-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(70, 130, 180, 0.4);
+  box-shadow: 
+    0 12px 35px rgba(0, 0, 0, 0.4),
+    inset 0 0 30px rgba(70, 130, 180, 0.1),
+    0 0 30px rgba(70, 130, 180, 0.2);
+}
+
+.rover-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(70, 130, 180, 0.3);
+  transition: all 0.3s ease;
+}
+
+.rover-card:hover img {
+  border-color: rgba(70, 130, 180, 0.6);
+  box-shadow: 0 0 20px rgba(70, 130, 180, 0.3);
+}
+
+.rover-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4682b4;
+  margin: 0 0 0.8rem 0;
+  text-shadow: 0 0 10px rgba(70, 130, 180, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.rover-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #c0c0c0;
+  margin: 0.5rem 0;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
+}
+
+/* =====================================
+   SPACECRAFTS SECTION (OPEN STRUCTURE)
+   ===================================== */
+
+.spacecrafts-column {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.spacecraft-card {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.spacecraft-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(70, 130, 180, 0.3), transparent);
+}
+
+.spacecraft-card:hover {
+  transform: translateX(10px);
+}
+
+.spacecraft-card:last-child::after {
+  display: none;
+}
+
+.spacecraft-card img {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(70, 130, 180, 0.1);
+  transition: all 0.4s ease;
+  border: 2px solid rgba(70, 130, 180, 0.2);
+}
+
+.spacecraft-card:hover img {
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(70, 130, 180, 0.3);
+  border-color: rgba(70, 130, 180, 0.5);
+  transform: scale(1.02);
+}
+
+.spacecraft-card h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4682b4;
+  margin: 0 0 1.5rem 0;
+  text-shadow: 0 0 15px rgba(70, 130, 180, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.spacecraft-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d0d0d0;
+  margin: 1rem 0;
+  text-shadow: 0 0 5px rgba(208, 208, 208, 0.2);
+}
+
+.spacecraft-card p strong {
+  color: #87ceeb;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(135, 206, 235, 0.4);
+  display: inline-block;
+  min-width: 120px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+
+@media (max-width: 1024px) {
+  .rovers-spacecrafts-container {
+    padding: 1.5rem;
+  }
+  
+  .rovers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .spacecraft-card {
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+  }
+  
+  .spacecraft-card img {
+    width: 300px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rovers-spacecrafts-container h2 {
+    font-size: 2.2rem;
+    margin: 2rem 0 1.5rem 0;
+  }
+  
+  .rovers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .spacecraft-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .spacecraft-card img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    justify-self: center;
+  }
+  
+  .spacecraft-card h4 {
+    font-size: 1.6rem;
+  }
+  
+  .spacecraft-card p {
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .rovers-spacecrafts-container {
+    padding: 1rem;
+  }
+  
+  .rovers-spacecrafts-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .rover-card {
+    padding: 1rem;
+  }
+  
+  .rover-card img {
+    height: 180px;
+  }
+  
+  .spacecraft-card img {
+    height: 200px;
+  }
+  
+  .spacecraft-card h4 {
+    font-size: 1.4rem;
+  }
+  
+  .spacecraft-card p {
+    font-size: 1rem;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4682b4, #2c5aa0);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(70, 130, 180, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #5a9bd4, #4682b4);
+}
