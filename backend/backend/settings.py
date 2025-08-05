@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-c@wa1*&t!c#4=vr#!pr==%&k8mqg1xm)l*%l+d8m1v3*-0)46&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["discoverspace.onrender.com", "localhost", "127.0.0.1"]
+
 
 
 # REST Framework settings
@@ -70,7 +71,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+##CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://discoverspace.netlify.app",  
+]
+CSRF_TRUSTED_ORIGINS = ['https://discoverspace.netlify.app']
+
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
