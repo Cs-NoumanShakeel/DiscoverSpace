@@ -17,7 +17,7 @@ function Form({ route, method }) {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const { loggedInUserId, setloggedInUserId } = useLoggedInUser();
-
+  const [error,seterror] = useState(null)
 
   const navigate = useNavigate();
 
@@ -46,8 +46,8 @@ function Form({ route, method }) {
     localStorage.setItem("LOGGED_IN_USER_ID", res.data.user.id);
 
 
-  } catch (error) {
-    alert("❌ " + (error.response?.data?.detail || error.message));
+  } catch (err) {
+     seterror(err);
   } finally {
     setLoading(false);
   }
