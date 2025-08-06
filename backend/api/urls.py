@@ -4,6 +4,7 @@ from .views import MyTokenObtainPairView
 
 urlpatterns = [
     path('historical-missions/', HistoricalMissionView.as_view()),
+     path('run-fetch-launches/', run_fetch_launches),
     path('upcoming-missions/', UpcomingMissionView.as_view()),
     path('missions/<int:mission_id>/thoughts/', MissionThoughtListCreateAPIView.as_view(), name='mission-thoughts'),
     path('user/register/', UserCreateView.as_view(), name='user-register'),

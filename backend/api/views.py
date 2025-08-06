@@ -50,6 +50,21 @@ class ThoughtView(generics.UpdateAPIView):
     serializer_class = UpcomingMissionSerializer
     lookup_field = 'id'  
 
+# api/views.py
+from django.http import JsonResponse
+from django.core.management import call_command
+from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
+def run_fetch_launches(request):
+    if request.method == "POST":  # Use POST to prevent accidental triggering
+        try:
+            call_command('fetch_launches')
+            return JsonResponse({"status": "success", "message": "Launches fetched successfully!"})
+        except Exception as e:
+            return JsonResponse({"status": "error", "message": str(e)})
+    return JsonResponse({"status": "error", "message": "Only POST allowed"}, status=405)
+
 
 class MissionThoughtListCreateAPIView(generics.ListCreateAPIView):
     serializer_class = MissionThoughtSerializer
