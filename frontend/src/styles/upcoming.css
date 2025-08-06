@@ -395,7 +395,6 @@
   font-size: 1rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .Upcoming {
     padding: 1rem;
@@ -429,17 +428,19 @@
     gap: 1.5rem;
   }
   
-  /* Updated video styling for mobile */
+  /* Updated video styling for mobile - INCREASED WIDTH, REDUCED HEIGHT */
   .mission-video {
-    width: 400px;
-    max-width: 100%;
-    height: 200px;
+    width: 100%;
+    max-width: 600px; /* Increased from 400px */
+    height: 180px; /* Reduced from 200px */
     object-fit: cover;
   }
   
   .footage {
-   width: 400px;
+    width: 100%;
+    max-width: 600px; /* Increased from 400px */
     padding: 0 0.5rem;
+    margin: 2rem auto; /* Center the container */
   }
   
   .Upcoming > h3 {
@@ -454,19 +455,28 @@
 /* Additional breakpoint for very small screens */
 @media (max-width: 480px) {
   .mission-video {
-    height: 180px;
+    width: 100%;
+    max-width: 500px; /* Increased from previous value */
+    height: 150px; /* Reduced from 100px but kept reasonable */
   }
   
   .footage {
     padding: 0 0.25rem;
-    width: 400px;
+    width: 100%;
+    max-width: 500px; /* Increased from 400px */
   }
 }
 
 /* Landscape orientation for mobile */
 @media (max-width: 768px) and (orientation: landscape) {
   .mission-video {
-    height: 160px;
-    width: 400px;
+    height: 140px; /* Reduced from 160px */
+    width: 100%;
+    max-width: 650px; /* Increased from 400px */
+  }
+  
+  .footage {
+    width: 100%;
+    max-width: 650px; /* Increased to match video */
   }
 }
