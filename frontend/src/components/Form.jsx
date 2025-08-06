@@ -42,8 +42,11 @@ function Form({ route, method }) {
     }
 
     navigate("/home");
-    setloggedInUserId(res.data.user.id); // ✅ Now it will work
+    if (res.data.user?.id) {
+    setloggedInUserId(res.data.user.id);
     localStorage.setItem("LOGGED_IN_USER_ID", res.data.user.id);
+}
+
 
 
   } catch (err) {
