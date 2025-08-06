@@ -578,13 +578,19 @@
     margin-right: 0;
     padding: 0.75rem;
   }
-  
+  .footage{
+    width: 100%;
+    max-width: 620px; /* Increased from 400px */
+  }
   .slide img {
     height: 180px;
   }
   
   .mission-video {
-    height: 180px;
+
+    width: 100%;
+    max-width: 620px;
+    height: 230px;
   }
   
   .slide p {

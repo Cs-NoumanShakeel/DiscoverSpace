@@ -431,14 +431,14 @@
   /* Updated video styling for mobile - INCREASED WIDTH, REDUCED HEIGHT */
   .mission-video {
     width: 100%;
-    max-width: 600px; /* Increased from 400px */
-    height: 180px; /* Reduced from 200px */
+    max-width: 800px; /* Increased from 400px */
+    height: 400px; /* Reduced from 200px */
     object-fit: cover;
   }
   
   .footage {
     width: 100%;
-    max-width: 600px; /* Increased from 400px */
+    max-width: 750px; /* Increased from 400px */
     padding: 0 0.5rem;
     margin: 2rem auto; /* Center the container */
   }
@@ -469,14 +469,14 @@
 @media (max-width: 480px) {
   .mission-video {
     width: 100%;
-    max-width: 500px; /* Increased from previous value */
-    height: 150px; /* Reduced from 100px but kept reasonable */
+    max-width: 620px; /* Increased from previous value */
+    height: 230px; /* Reduced from 100px but kept reasonable */
   }
   
   .footage {
     padding: 0 0.25rem;
     width: 100%;
-    max-width: 500px; /* Increased from 400px */
+    max-width: 620px; /* Increased from 400px */
   }
 }
 
