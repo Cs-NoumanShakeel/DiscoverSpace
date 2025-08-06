@@ -298,8 +298,8 @@ body {
 
 @media (max-width: 768px) {
   .planets > * {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem; /* Increased from 1rem */
+    padding-right: 2rem; /* Increased from 1rem */
   }
   
   .planets > h3:first-child {
@@ -317,7 +317,7 @@ body {
     gap: 2rem;
     text-align: center;
     margin-bottom: 4rem;
-    padding: 2rem 0;
+    padding: 2rem 1.5rem; /* Added horizontal padding */
   }
   
   .planet-image {
@@ -329,6 +329,7 @@ body {
   .planet-section > h3 {
     font-size: 1.8rem;
     text-align: center;
+    padding: 0 1rem; /* Added padding for titles */
   }
   
   .planet-section > p {
@@ -336,6 +337,7 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 1rem; /* Added padding for paragraphs */
   }
   
   .planet-info {
@@ -345,26 +347,38 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 1rem; /* Added padding for planet info */
   }
   
   .planet-info h4 {
     min-width: auto;
     margin-bottom: 0.3rem;
+    padding-left: 0.5rem; /* Added left padding for info headers */
+  }
+  
+  .planet-info span {
+    padding-left: 0.5rem; /* Added left padding for info content */
   }
 }
 
 @media (max-width: 480px) {
   .planets > * {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem; /* Increased from 1rem */
+    padding-right: 1.5rem; /* Increased from 1rem */
   }
   
   .planets > h3:first-child {
     font-size: 2rem;
+    padding: 0 1rem; /* Added padding for main title */
+  }
+  
+  .planet-section {
+    padding: 2rem 1rem; /* Added horizontal padding */
   }
   
   .planet-section > h3 {
     font-size: 1.5rem;
+    padding: 0 1rem; /* Maintained padding for titles */
   }
   
   .planet-image {
@@ -374,14 +388,45 @@ body {
   
   .planet-section > p {
     font-size: 1rem;
+    padding: 0 1rem; /* Maintained padding for paragraphs */
+  }
+  
+  .planet-info {
+    padding: 0 1rem; /* Maintained padding for planet info */
   }
   
   .planet-info h4 {
     font-size: 0.9rem;
+    padding-left: 0.8rem; /* Increased left padding for small screens */
   }
   
   .planet-info span {
     font-size: 0.95rem;
+    padding-left: 0.8rem; /* Increased left padding for small screens */
+  }
+}
+
+/* Very small screens additional spacing */
+@media (max-width: 360px) {
+  .planets > * {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  
+  .planet-section {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .planet-section > h3,
+  .planet-section > p,
+  .planet-info {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  
+  .planet-info h4,
+  .planet-info span {
+    padding-left: 1rem;
   }
 }
 
