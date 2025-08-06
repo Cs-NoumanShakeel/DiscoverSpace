@@ -83,7 +83,7 @@ export default function Launches() {
   const fetch_launches = async () => {
     setloading(true);
     try {
-      const res = await axios.get("http://localhost:8000/api/launches/");
+      const res = await axios.get("https://discoverspace.onrender.com/api/launches/");
       setLaunches(res.data);
       console.log("Launch Data: ", res.data);
 

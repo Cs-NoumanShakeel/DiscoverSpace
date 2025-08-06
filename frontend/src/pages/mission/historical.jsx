@@ -21,7 +21,7 @@ export default function Historical() {
   const fetchAllMissions = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:8000/api/historical-missions/`);
+      const res = await axios.get(`https://discoverspace.onrender.com/api/historical-missions/`);
       
       console.log("API response:", res.data);
       
@@ -142,7 +142,7 @@ export default function Historical() {
                   {selectedMission.images.map((img, idx) => (
                     <div key={idx} className="slide">
                       <img 
-                        src={img.image.startsWith('http') ? img.image : `http://localhost:8000${img.image}`} 
+                        src={img.image.startsWith('http') ? img.image : `https://discoverspace.onrender.com${img.image}`} 
                         alt="mission visual" 
                       />
                       <p>{img.caption}</p>

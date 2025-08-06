@@ -9,7 +9,7 @@ export default function Planets() {
   const fetchPlanets = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:8000/api/planets/");
+      const res = await axios.get("https://discoverspace.onrender.com/api/planets/");
       if (Array.isArray(res.data)) {
         setPlanets(res.data);
       } else {
@@ -41,7 +41,7 @@ export default function Planets() {
             <p>{planet.introduction}</p>
             {planet.image && (
               <img
-                src={`http://localhost:8000${planet.image}`}
+                src={`https://discoverspace.onrender.com${planet.image}`}
                 alt={planet.title}
                 className="planet-image"
               />

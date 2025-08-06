@@ -10,7 +10,7 @@ export default function Footer() {
                     <Link to='/'><i className="fab fa-instagram" /> Instagram</Link>
                     <Link to='/'><i className="fab fa-square-x-twitter" /> Twitter/X</Link>
                     <Link to='/'><i className="fab fa-whatsapp" /> Whatsapp</Link>
-                    <Link to='/'><i className="fab fa-pinterest-p" /> Pinterest</Link>
+                    
                 </div>
                 <div className="footer-col">
                     <Link to='/'>About</Link>
@@ -23,7 +23,7 @@ export default function Footer() {
                     <Link to='/'>Blogs</Link>
                     <Link to='/'>Future Trends</Link>
                     <Link to='/'>Recommendations</Link>
-                    <Link to='/'>Lifestyle</Link>
+                  
                 </div>
             </div>
             <div className="copyright">

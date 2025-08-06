@@ -6,7 +6,8 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin: 0; /* Removes extra margin */
+  margin: 0; 
+
 }
 
 .link-columns {
@@ -185,7 +186,7 @@
 
   .footer a {
     padding: 2px 0;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .footer .copyright {
@@ -242,12 +243,12 @@
 
   .footer-col a {
     padding: 3px 0;
-    font-size: 14px;
+    font-size: 13px;
     justify-content: center;
   }
 
   .footer i {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 
@@ -256,6 +257,7 @@
   .footer {
     padding: 25px 15px 20px 15px;
     gap: 20px;
+    
   }
 
   .link-columns {
@@ -275,15 +277,15 @@
   .footer-col a {
     justify-content: center;
     padding: 4px 0;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .footer i {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .footer .copyright {
-    font-size: 13px;
+    font-size: 11px;
     padding-top: 20px;
     line-height: 1.4;
   }

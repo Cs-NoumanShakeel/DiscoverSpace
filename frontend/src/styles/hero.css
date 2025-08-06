@@ -25,6 +25,26 @@
   gap: 10px;
   padding: 0 2rem;
   text-align: center;
+  /* Base text sizes for desktop */
+  font-size: 1rem;
+}
+
+.hero-overlay h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.hero-overlay h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hero-overlay p {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin: 0;
 }
 
 /* Tablet styles (768px to 1024px) */
@@ -32,11 +52,23 @@
   .hero-section {
     height: 550px;
   }
-
+  
   .hero-overlay {
     top: 50px;
     padding: 0 1.5rem;
     gap: 12px;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-overlay h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-overlay p {
+    font-size: 1.1rem;
   }
 }
 
@@ -45,13 +77,25 @@
   .hero-section {
     height: 450px;
   }
-
+  
   .hero-overlay {
     top: 40px;
     padding: 0 1rem;
     gap: 15px;
   }
-
+  
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-overlay h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+  
   /* Ensure video maintains aspect ratio on mobile */
   .hero-video {
     min-height: 450px;
@@ -64,14 +108,26 @@
   .hero-section {
     height: 400px;
   }
-
+  
   .hero-overlay {
     top: 30px;
     padding: 0 0.8rem;
     gap: 18px;
     justify-content: center;
   }
-
+  
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-overlay h2 {
+    font-size: 1.25rem;
+  }
+  
+  .hero-overlay p {
+    font-size: 0.75rem;
+  }
+  
   .hero-video {
     min-height: 400px;
   }
@@ -82,13 +138,25 @@
   .hero-section {
     height: 350px;
   }
-
+  
   .hero-overlay {
     top: 20px;
     padding: 0 0.5rem;
     gap: 20px;
   }
-
+  
+  .hero-overlay h1 {
+    font-size: 1rem;
+  }
+  
+  .hero-overlay h2 {
+    font-size: 1rem;
+  }
+  
+  .hero-overlay p {
+    font-size: 0.5rem;
+  }
+  
   .hero-video {
     min-height: 350px;
   }
@@ -100,12 +168,24 @@
     height: 100vh;
     min-height: 300px;
   }
-
+  
   .hero-overlay {
     top: 20px;
     gap: 8px;
   }
-
+  
+  .hero-overlay h1 {
+    font-size: 0.75rem;
+  }
+  
+  .hero-overlay h2 {
+    font-size: 1rem;
+  }
+  
+  .hero-overlay p {
+    font-size: 0.85rem;
+  }
+  
   .hero-video {
     height: 100vh;
     min-height: 300px;
@@ -113,7 +193,7 @@
 }
 
 /* High DPI/Retina display optimizations */
-@media screen and (-webkit-min-device-pixel-ratio: 2), 
+@media screen and (-webkit-min-device-pixel-ratio: 2),
        screen and (min-resolution: 192dpi) {
   .hero-video {
     /* Ensure crisp video on high-DPI screens */

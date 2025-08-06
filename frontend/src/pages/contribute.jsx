@@ -29,7 +29,7 @@ export default function Contribute() {
   const fetchSuggestions = async () => {
     setloading(true);
     try {
-      const res = await axios.get('http://localhost:8000/api/suggestions/');
+      const res = await axios.get('https://discoverspace.onrender.com/api/suggestions/');
       setsuggestions(Array.isArray(res.data) ? res.data : []);
     } catch (err) {
       console.error(err);
@@ -55,8 +55,8 @@ export default function Contribute() {
       if (video) data.append("video", video);
 
       const url = editingId
-        ? `http://localhost:8000/api/suggestions/${editingId}/update/`
-        : `http://localhost:8000/api/suggestions/create/`;
+        ? `https://discoverspace.onrender.com/api/suggestions/${editingId}/update/`
+        : `https://discoverspace.onrender.com/api/suggestions/create/`;
 
       const method = editingId ? "patch" : "post";
 
@@ -90,7 +90,7 @@ export default function Contribute() {
   const handleDelete = async (id) => {
     setloading(true);
     try {
-      await axios.delete(`http://localhost:8000/api/suggestions/${id}/delete/`, {
+      await axios.delete(`https://discoverspace.onrender.com/api/suggestions/${id}/delete/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setsuggestions(suggestions.filter(s => s.id !== id));
@@ -108,8 +108,8 @@ export default function Contribute() {
     settitle(suggestion.title);
     setpurpose(suggestion.purpose);
     settype(suggestion.type);
-    setimage(null); // You can't prepopulate file input
-    setvideo(null); // You can't prepopulate file input
+    setimage(null); 
+    setvideo(null); 
     setEditingId(suggestion.id);
   };
 

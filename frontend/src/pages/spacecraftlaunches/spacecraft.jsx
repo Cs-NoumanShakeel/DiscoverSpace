@@ -4,7 +4,7 @@ import "../../styles/spacecraft.css";
 
 const NASA_API_KEY = "2kLnkbEtjvle8HDxqj5mvTNgSnWLKGMWDQGtFc3t";
 const MARS_ROVER_API = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${NASA_API_KEY}`;
-const SPACECRAFTS_API = "http://localhost:8000/api/spacecrafts/"; // Change this to your backend URL
+const SPACECRAFTS_API = "https://discoverspace.onrender.com/api/spacecrafts/"; // Change this to your backend URL
 
 export default function RoversAndSpacecrafts() {
   const [rovers, setRovers] = useState([]);
@@ -47,7 +47,7 @@ export default function RoversAndSpacecrafts() {
       <div className="spacecrafts-column">
         {spacecrafts.map((craft, index) => (
           <div className="spacecraft-card" key={index}>
-            <img src={`http://localhost:8000${craft.image}`} alt={craft.name} />
+            <img src={`https://discoverspace.onrender.com${craft.image}`} alt={craft.name} />
             <h4>{craft.name}</h4>
             <p><strong>Mission:</strong> {craft.mission}</p>
             <p><strong>Launch Date:</strong> {craft.launch_date}</p>

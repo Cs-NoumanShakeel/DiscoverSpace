@@ -27,7 +27,7 @@ export default function Upcoming() {
 
     try {
       await axios.post(
-        `http://localhost:8000/api/missions/${id}/thoughts/`,
+        `https://discoverspace.onrender.com/api/missions/${id}/thoughts/`,
         { message: thought },
         {
           headers: {
@@ -49,7 +49,7 @@ export default function Upcoming() {
 
   const fetchThoughts = async (missionId) => {
     try {
-      const res = await axios.get(`http://localhost:8000/api/missions/${missionId}/thoughts/`);
+      const res = await axios.get(`https://discoverspace.onrender.com/api/missions/${missionId}/thoughts/`);
       setThoughtsList(res.data);
     } catch (err) {
       console.error(err);
@@ -60,7 +60,7 @@ export default function Upcoming() {
   const fetchAllMissions = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:8000/api/upcoming-missions/");
+      const res = await axios.get("https://discoverspace.onrender.com/api/upcoming-missions/");
       if (Array.isArray(res.data)) {
         setmissions(res.data);
         setSelectedMission(res.data[0] || null);
