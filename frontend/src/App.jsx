@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
-import Today from "./pages/apod/today";
+import Today from "./pages/apod/Today";
 import Archive from "./pages/apod/Archive";
 import Historical from "./pages/mission/historical";
 import Register from "./pages/register";
